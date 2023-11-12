@@ -1,0 +1,10 @@
+. Generating a Calendar table with aaded columns in PBI-
+  Calendar = ADDCOLUMNS(
+    CALENDAR(DATE(2021,1,1), DATE(2021,12,31)),
+    "Year", YEAR([Date]),
+    "Month Number", MONTH([Date]),
+    "Month Name", FORMAT([Date], "MMMM"),
+    "Day of Week Number", WEEKDAY([Date], 2),
+    "Day of Week Name", FORMAT([Date], "dddd")
+)
+
